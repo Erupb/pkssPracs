@@ -64,6 +64,7 @@ public class Server extends Thread {
                             continue;
                         }
                         switch (choice) {
+                            case 0 -> {toClient.close();}
                             case 11 -> {
                                 int[] nums = stream(fromClient.readLine().split("\s"))
                                         .mapToInt(Integer::parseInt)

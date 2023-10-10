@@ -33,6 +33,9 @@ public class Client extends Thread {
                     continue;
                 }
                 switch (choice) {
+                    case 0 -> {
+                        toServer.close();
+                    }
                     case 11 -> {
                         System.out.println("Client> Введите 3 числа:");
                         StringBuilder stringBuilder = new StringBuilder();
@@ -80,6 +83,7 @@ public class Client extends Thread {
                         System.out.println("Client> Введите количество чисел:");
                         StringBuilder stringBuilder = new StringBuilder();
                         int n = scanner.nextInt();
+                        System.out.println("Client> Введите числа:");
                         for(int i=0; i<n; i++){
                             stringBuilder.append(scanner.nextInt());
                             stringBuilder.append(" ");
@@ -104,7 +108,7 @@ public class Client extends Thread {
                     }
 
                     default -> {
-                        System.out.println("Client> Выбрана не допустимая операция. Доступные операции: [5, 8, 11, 14, 17]");
+                        System.out.println("Client> Выбрана не допустимая операция. Доступные операции: [11, 14, 17, 20, 23]");
                         continue;
                     }
                 }

@@ -7,7 +7,8 @@ public class prac1 {
         //z11();
         //z14();
         //z17();
-        z20();
+        //z20();
+        z23();
     }
     public static void z11(){
         Scanner scanner = new Scanner(System.in);
